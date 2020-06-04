@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+    <ui:insert name="estilos">head</ui:insert>
+    <h:head>
+        <title>Articulos ejemplo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:panelGroup class="">
+            <nav class="navbar navbar-expand-lg navbar-light  bd-navbar-nav flex-row" style="background-color: #e3f2fd;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#">Emily Shops</a>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <h:link class="nav-link" value="" >Inicio <span class="sr-only">(current)</span></h:link>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Prendas
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Camisa niña    <ui:insert name="icon_menu_nina">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Vestido niña   <ui:insert name="icon_menu_nina_pan">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Enterizo niña  <ui:insert name="icon_menu_nina_en">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Camisa niño    <ui:insert name="icon_menu_nino">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Pantalon niño  <ui:insert name="icon_menu_nino_pan">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Enterizo niño  <ui:insert name="icon_menu_nino_en">article</ui:insert></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Calzado
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Niña<ui:insert name="cal_nina">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Niño<ui:insert name="cal_nino">article</ui:insert></a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <h:form class="form-inline my-2 my-lg-0" >
+                        <a class="nav-link" href="#">Iniciar Sesion     <span class="sr-only">(current)</span></a>
+                        <div class="p-1"></div>
+                        <a class="nav-link" href="#">registrarse</a>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+                    </h:form>
+                </div>
+
+            </nav>
+
+        </h:panelGroup>
+        <div class="container-fluid"> 
+            <div class="row flex-xl-nowrap">
+
+                <div class="col-md-3 col-xl-2 bd-sidebar">
+                    <div class="d-none d-sm-none d-md-block">
+                        <form role="search" class="bd-search d-flex align-items-center">
+                            <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;">
+
+                            </span>
+                        </form>
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action active">
+                                Cras justo odio
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+                            <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
+                            <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
+                            <button type="button" class="list-group-item list-group-item-action">Vestibulum at eros</button>
+
+                        </div>
+                    </div>
+                </div>
+                <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+                    <ui:insert name="article">article</ui:insert>
+                </main>
+
+            </div>
+        </div>
+
+        <div>
+            <footer class="page-footer font-small special-color-dark pt-4">
+
+                <!-- Footer Elements -->
+                <div class="container">
+
+                    <!-- Social buttons -->
+                    <ul class="list-unstyled list-inline text-center">
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-fb mx-1">
+                                <i class="fab fa-facebook-f"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-tw mx-1">
+                                <i class="fab fa-twitter"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-gplus mx-1">
+                                <i class="fab fa-google-plus-g"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-li mx-1">
+                                <i class="fab fa-linkedin-in"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-dribbble mx-1">
+                                <i class="fab fa-dribbble"> </i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Social buttons -->
+
+                </div>
+                <!-- Footer Elements -->
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+
+        </div>
+        <div class="container">
+            <input type="
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </h:body>
+</html>
