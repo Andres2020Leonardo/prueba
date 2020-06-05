@@ -7,32 +7,125 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
 
-<div class="container-fluid"> 
-            <div class="row flex-xl-nowrap">
+    <div class="container-fluid "> 
+        <div class="row flex-xl-nowrap">
 
-                <div class="col-md-3 col-xl-2 bd-sidebar">
-                    <div class="d-none d-sm-none d-md-block">
-                        <form role="search" class="bd-search d-flex align-items-center">
-                            <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;">
+            <div class="d-none d-sm-none d-md-block ">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Rango de precio
+                                </button>
+                            </h2>
+                        </div>
 
-                            </span>
-                        </form>
-                        <div class="list-group">
-                            <button type="button" class="list-group-item list-group-item-action active">
-                                Cras justo odio
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
-                            <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
-                            <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
-                            <button type="button" class="list-group-item list-group-item-action">Vestibulum at eros</button>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="formControlRange">Rango COP</label>
+                                        <input type="range" class="form-control-range" id="formControlRange" value=""/>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Categorias
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <h:form class="form-inline my-2 my-lg-0" >
+                                    <a class="nav-link" href="#">Iniciar Sesion     <span class="sr-only">(current)</span></a>
+                                    <div class="p-1"></div>
+                                    <a class="nav-link" href="#">registrarse</a>
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 
+                                </h:form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Relevancia
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action active">
+                                        Cras justo odio
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
-                    <ui:insert name="article">article</ui:insert>
-                </main>
-
             </div>
+            <main class="col-md-6 col-xl-8 py-md-3 pl-md-5 bd-content" style="height: 100%; top: 5px">
+                <ui:insert name="article">article</ui:insert>
+            </main>
+
+            
+                
+                    <div style="top: 5px; height: 50%" id="carouselExampleCaptions" class="carousel slide col-md-2 align-content-center shadow-lg p-3 mb-5 bg-white rounded" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <ui:insert name="slide1">article</ui:insert>
+                                <div class="carousel-caption d-none d-md-block text-warning">
+                                    <h5>Saco unisex</h5>
+                                    <p>11.00P</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <ui:insert name="slide2">article</ui:insert>
+                                <div class="carousel-caption d-none d-md-block text-warning">
+                                    <h5>conjunto blanco</h5>
+                                    <p>20.00P</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <ui:insert name="slide3">article</ui:insert>
+                                <div class="carousel-caption d-none d-md-block text-warning">
+                                    <h5>Conjunto niña</h5>
+                                    <p>11.11P</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>                
+
+                    </div>
+                
+           
+
+
         </div>
+    </div>
 </html>
