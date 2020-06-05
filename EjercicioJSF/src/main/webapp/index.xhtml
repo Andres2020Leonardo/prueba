@@ -13,8 +13,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
     </h:head>
     <body>
-        <ui:composition template="./WEB-INF/plantillas/plantillaPrinicipal.xhtml">
-            <ui:define name="estilos"><link rel="stylesheet" href="recursos/css/styleBotonFloat.css" /></ui:define>
+       
+        <ui:composition template="./WEB-INF/plantillas/template_index.xhtml">
+             <ui:define name="estilos"><link rel="stylesheet" href="recursos/css/styleBotonFloat.css" /></ui:define>
             <!-- iconos de menu prendas-->
             <ui:define name="icon_menu_nina">     <img style="width: 30%" src="recursos/images/icon_menu_nina.png"/></ui:define>
             <ui:define name="icon_menu_nina_pan">     <img style="width: 30%" src="recursos/images/icon_menu_nina_pan.png"/></ui:define>
@@ -26,6 +27,8 @@
             <ui:define name="cal_nina">     <img style="width: 30%" src="recursos/images/cal_nina.png"/></ui:define>
             <ui:define name="cal_nino">     <img style="width: 30%" src="recursos/images/cal_nino.png"/></ui:define>
             <ui:define name="icon_inicio">     <img style="width:1%" src="recursos/images/bebe.png"/></ui:define>
+            <ui:define name="filtrar"><img src="recursos/images/filtrar.png" width="32" height="32"/></ui:define>
+            
             <!-- article--> 
             <ui:define name="article">
                 <div >
@@ -110,8 +113,8 @@
 
               
             </ui:define>
-            <ui:define name="filtrar"><img src="recursos/images/filtrar.png" width="32" height="32"/></ui:define>
-
+            <ui:define name="face_icon"><img src="recursos/images/face_icon1.png" /></ui:define>
+            <!--redes sociales-->
         </ui:composition>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

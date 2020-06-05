@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    
+<h:panelGroup class="">
+            <nav class="navbar navbar-expand-lg navbar-light  bd-navbar-nav flex-row" style="background-color: #e3f2fd;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#">Emily Shops</a>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <h:link class="nav-link" value="" >Inicio <span class="sr-only">(current)</span></h:link>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Prendas
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Camisa niña    <ui:insert name="icon_menu_nina">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Vestido niña   <ui:insert name="icon_menu_nina_pan">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Enterizo niña  <ui:insert name="icon_menu_nina_en">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Camisa niño    <ui:insert name="icon_menu_nino">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Pantalon niño  <ui:insert name="icon_menu_nino_pan">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Enterizo niño  <ui:insert name="icon_menu_nino_en">article</ui:insert></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Calzado
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Niña<ui:insert name="cal_nina">article</ui:insert></a>
+                                    <a class="dropdown-item" href="#">Niño<ui:insert name="cal_nino">article</ui:insert></a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <h:form class="form-inline my-2 my-lg-0" >
+                        <a class="nav-link" href="#">Iniciar Sesion     <span class="sr-only">(current)</span></a>
+                        <div class="p-1"></div>
+                        <a class="nav-link" href="#">registrarse</a>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+                    </h:form>
+                </div>
+
+            </nav>
+
+        </h:panelGroup>
+</html>
